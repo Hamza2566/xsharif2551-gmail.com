@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.header{
+    width: 90%;
+    height: 90vh;
+    display: flex;
+}
+.image{
+    width: 40%;
+    height: 100%;
+    background-image: url(/images/a49cea3d21ce1622c252059afba26f30.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.text{
+    margin-top: 5%;
+    width: 60%;
+    height: 80%;
+    background-color: whitesmoke;
+}
+.text > .title , .para{
+    margin-left: 5%;
+}
+.text > .links{
+    margin-right: 5%;
+}
+.title{
+    font-size: 2rem;
+}
+.para{
+    width: 80%;
+    font-size: 2rem;
+}
+.links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Aligns items vertically (Y-axis) */
+    gap: 20px;
+    height: 18vh;
+        
+}
