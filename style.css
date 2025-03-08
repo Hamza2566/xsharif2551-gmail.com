@@ -13,9 +13,14 @@ body {
   margin: 0;
 }
 .home {
-  background-color: #007bff;
+  transform: skewY(angle);
   min-height: 600px;
   display: flex;
+}
+.color{
+  background-color: #007bff;
+  height:100vh ;
+  width: 100%;
 }
 .home > * {
   width: 50%;
@@ -58,7 +63,6 @@ body {
   margin-top: -2%;
   font-size: 1.5rem;
   background-color: white;
-  border-radius: 10px;
 }
 .info > * {
   margin: 0px 5% 0px 5%;
@@ -93,11 +97,17 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr  1fr;
     gap: 40px;
+  margin-bottom: 8%;
+
 }
 .project{
     max-width:fit-content;
     border-radius: 10px;
     box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.project:hover{
+  transform: scale(1.1);
 }
 
 .screenshot{
@@ -117,7 +127,6 @@ body {
     display: flex;
 }
 .project-name > * {
-    border: 1px solid white;
     height: 60px;
     font-size: 1.3rem;
 }
@@ -141,4 +150,138 @@ body {
     width: 80%;
     margin-left: 8%;
     font-size: 1.2rem;
+}
+.footer{
+  background-color: #007bff;
+  height: 110vh;
+  display: flex;
+}
+.contact{
+  background-color: #007bff;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding-top: 3%;
+  padding-left: 5%;
+  gap: 20px;
+}
+.contact > * {
+  margin-bottom: -5px;
+  width: 80%;
+}
+
+.para{
+  font-size:25px;
+}
+.contact-links{
+  display: flex;
+  gap: 20px;
+  height: 150px;
+}
+.contact-links a{
+  color: black;
+}
+.contact-img{
+  width: 57%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8%;
+}
+
+.contact-img img {
+  width: 100%;
+  height: auto; 
+  max-height: 80vh;
+  object-fit: cover; 
+}
+/* Mobile
+Small Mobile: Up to 320px
+Mobile: 321px to 480px
+Tablet
+Tablet Portrait: 481px to 768px
+Tablet Landscape: 769px to 1024px */
+@media(Max-Width: 768px){
+  .project-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr  1fr 1fr;
+    gap: 40px;
+  margin-bottom: 8%;
+  }
+  .contact{
+    width: 60%;
+  }
+  .contact-img{
+    margin-right: 1%;
+    width: 40%;
+  }
+  .contact-img img{
+    max-height: 90vh;
+  }
+}
+@media(Max-Width: 480px){
+  .home {
+    background-color: #007bff;
+    min-height: 600px;
+    display: block;
+    width: 105%;
+  }
+  .home .home-photo{
+    width: 92.5%;
+    display: flex;
+    justify-content: center;
+    margin-left: 4%;
+  }
+  .home .home-info{
+    width: 100%;
+  }
+  .home-info .info{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    background-color: violet;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .projects  {
+    width: 105%;
+  }
+   .projects .mywork{
+    display: flex;
+    justify-content: center;
+   }
+  .project-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr  1fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+  margin-bottom: 8%;
+  }
+  .footer{
+    display: flex;
+    flex-direction: column;
+    width: 105%;
+  }
+  .footer > *{
+    width: 100%;
+  }
+  .footer .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 5%;
+  }
+
+  .contact-links{
+    display: flex;
+    justify-content: center;
+  }
+
 }
