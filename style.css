@@ -9,18 +9,23 @@ img {
 Secondary: #FFFFFF (White)
 Accent: #0056b3 (Dark Blue) */
 body {
-  background-color: #007bff;
+  background-color: white;
   margin: 0;
 }
 .home {
-  transform: skewY(angle);
   min-height: 600px;
   display: flex;
 }
 .color{
   background-color: #007bff;
+  margin-left: -25%;
+  margin-top: -10%;
   height:100vh ;
-  width: 100%;
+  width: 140%;
+  position: absolute;
+  z-index: -2;
+  transform: skewY(20deg);
+  transform: rotate(170deg);
 }
 .home > * {
   width: 50%;
@@ -203,6 +208,21 @@ Tablet
 Tablet Portrait: 481px to 768px
 Tablet Landscape: 769px to 1024px */
 @media(Max-Width: 768px){
+  .home-info{
+    display: flex;
+    justify-content: center;
+  }
+   .home-info .info{
+    font-size: 20px;
+    width:90%;
+  }
+  .home-photo{
+  margin-top: 8.5%;
+    position: relative;
+    z-index: 1;
+    width: 40%;
+    height: 450px;
+  }
   .project-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
